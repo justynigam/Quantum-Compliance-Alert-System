@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@)rm2$#hza9-25n@*9dorec*_by2#i=#o+a6#vdektw3tsaj!q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["quantum-compliance-alert-system-1.onrender.com", "localhost" , "127.0.0.1",]
 
 
 # Application definition
@@ -138,4 +138,5 @@ CELERY_RESULT_SERIALIZER = 'json'
 
 
 MEDIA_URL = '/media/gnn_graphs/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
