@@ -1,0 +1,2 @@
+Requirement already satisfied: faker in f:\quantum compliance alert system\.venv\lib\site-packages (37.6.0)
+Requirement already satisfied: tzdata in f:\quantum compliance alert system\.venv\lib\site-packages (from faker) (2025.2)

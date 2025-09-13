@@ -1,0 +1,5 @@
+Collecting liboqs-python
+  Downloading liboqs_python-0.14.1-py3-none-any.whl.metadata (11 kB)
+Downloading liboqs_python-0.14.1-py3-none-any.whl (15 kB)
+Installing collected packages: liboqs-python
+Successfully installed liboqs-python-0.14.1

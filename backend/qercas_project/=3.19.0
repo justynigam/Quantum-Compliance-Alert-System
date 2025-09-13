@@ -1,0 +1,6 @@
+Collecting pycryptodome
+  Downloading pycryptodome-3.23.0-cp37-abi3-win_amd64.whl.metadata (3.5 kB)
+Downloading pycryptodome-3.23.0-cp37-abi3-win_amd64.whl (1.8 MB)
+   ---------------------------------------- 1.8/1.8 MB 2.4 MB/s  0:00:00
+Installing collected packages: pycryptodome
+Successfully installed pycryptodome-3.23.0
