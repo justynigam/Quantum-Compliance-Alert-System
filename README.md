@@ -3,7 +3,7 @@ QERCAS is a full-stack, AI-powered RegTech (Regulatory Technology) prototype for
 
 The platform provides a real-time dashboard for compliance officers to monitor live transactions, investigate high-risk alerts with AI-generated explanations, analyze suspicious networks, and query regulatory documents using natural language.
 
-#Live Dashboard
+# Live Dashboard
 
 https://github.com/user-attachments/assets/dd7ece65-13c5-4fa9-a393-2e986d758eb6
 
