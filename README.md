@@ -3,23 +3,24 @@ QERCAS is a full-stack, AI-powered RegTech (Regulatory Technology) prototype for
 
 The platform provides a real-time dashboard for compliance officers to monitor live transactions, investigate high-risk alerts with AI-generated explanations, analyze suspicious networks, and query regulatory documents using natural language.
 
-Live Dashboard
-(Action Required: Replace this line with a screenshot of your running application. Drag and drop the image into your GitHub README.md editor.)
+#Live Dashboard
 
-Core Features
+https://github.com/user-attachments/assets/dd7ece65-13c5-4fa9-a393-2e986d758eb6
+
+**Core Features**
 Real-Time AI Analysis: A machine learning pipeline using Python (Scikit-learn/PyTorch) and asynchronous task queues (Celery, Redis) analyzes transactions in real-time, flagging them as Compliant, High-Risk, or Blocked.
 
-Explainable AI (XAI): Integrates a SHAP (SHapley Additive exPlanations) engine to provide transparent, human-readable justifications for every AI-driven decision, ensuring model auditability and trust.
+**Explainable AI (XAI)**: Integrates a SHAP (SHapley Additive exPlanations) engine to provide transparent, human-readable justifications for every AI-driven decision, ensuring model auditability and trust.
 
-Graph Neural Network (GNN) Analysis: A GNN service (using NetworkX) dynamically builds and visualizes transaction networks to uncover sophisticated financial crime patterns like money laundering rings.
+**Graph Neural Network (GNN) Analysis**: A GNN service (using NetworkX) dynamically builds and visualizes transaction networks to uncover sophisticated financial crime patterns like money laundering rings.
 
-Natural Language Processing (NLP): An AI-powered regulatory search engine using a Hugging Face Transformers model allows officers to ask complex questions in plain English and receive precise answers.
+**Natural Language Processing (NLP)**: An AI-powered regulatory search engine using a Hugging Face Transformers model allows officers to ask complex questions in plain English and receive precise answers.
 
-Advanced Privacy & Security Modules: The architecture includes services for future-proof security:
+**Advanced Privacy & Security Modules**: The architecture includes services for future-proof security:
 
-Federated Learning: A simulated environment for training the core AI model across multiple institutions without sharing sensitive, private data.
+**Federated Learning**: A simulated environment for training the core AI model across multiple institutions without sharing sensitive, private data.
 
-Post-Quantum Cryptography (PQC): An integrated service using the Kyber algorithm to provide quantum-resistant encryption for critical data, protecting it from "Harvest Now, Decrypt Later" attacks.
+**Post-Quantum Cryptography (PQC)**: An integrated service using the Kyber algorithm to provide quantum-resistant encryption for critical data, protecting it from "Harvest Now, Decrypt Later" attacks.
 
 Tech Stack
 Area
