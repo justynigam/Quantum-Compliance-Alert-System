@@ -22,101 +22,65 @@ Real-Time AI Analysis: A machine learning pipeline using Python (Scikit-learn/Py
 
 **Post-Quantum Cryptography (PQC)**: An integrated service using the Kyber algorithm to provide quantum-resistant encryption for critical data, protecting it from "Harvest Now, Decrypt Later" attacks.
 
-Tech Stack
-Area
+## Stack
 
-Technology / Library
+- Backend: Django (Python 3.11+), Celery
+- Broker: Redis
+- Frontend: React (Node.js 18+ / npm)
+- Task scheduling: Celery Beat or `django_celery_beat`
+- Dev tooling: Docker Desktop (for Redis), Git, PowerShell (Windows)
 
-Frontend
+## Prerequisites
 
-React (Vite), Axios, Chart.js, Tailwind CSS
+- Windows 10/11 with PowerShell
+- Python 3.11+
+- Node.js 18+ and npm
+- Docker Desktop (for Redis)
+- Git
 
-Backend
+## Quick Start (local, Windows / PowerShell)
 
-Django, Django REST Framework
+### 1) Clone
 
-AI / ML
+git clone <your-repo-url>
+cd <your-repo-root>
+# go to backend
+cd backend
 
-Scikit-learn, PyTorch, SHAP, NetworkX, Transformers (Hugging Face)
+# create & activate venv
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
 
-Async Tasks
+# install dependencies
+pip install -r requirements.txt
+# if the file exists in your project, also run:
+if (Test-Path ".\qercas_project\requirements.txt") { pip install -r .\qercas_project\requirements.txt }
 
-Celery, Redis
+#Database
+- python manage.py migrate
+- python manage.py createsuperuser
 
-Database
+#Run Django Server
+- python manage.py runserver
+# visit http://127.0.0.1:8000
 
-SQLite (Development), PostgreSQL (Production-ready)
 
-Security
+# Celery
+cd backend
+.\.venv\Scripts\Activate.ps1
+# Celery worker (Windows may require -P solo)
+celery -A qercas_project worker -l info -P solo
 
-py-oqs (Open Quantum Safe), pycryptodome (AES Fallback)
+# Optional: Celery beat (for periodic tasks)
+celery -A qercas_project beat -l info
 
-Local Setup and Installation
-Follow these steps to run the project on your local machine.
+# Frotend
+- cd ..\frontend
+- npm install
+- npm run dev
+- # visit http://localhost:3000
 
-Prerequisites
-Python (3.10+) & Pip
 
-Node.js & npm
 
-Git
 
-Redis
 
-1. Clone the Repository
-git clone [https://github.com/your-username/qercas-project.git](https://github.com/your-username/qercas-project.git)
-cd qercas-project
-
-2. Backend Setup
-# Navigate to the backend directory
-cd backend/qercas_project
-
-# Create and activate a virtual environment
-python -m venv ../venv
-source ../venv/Scripts/activate
-
-# Install Python dependencies
-pip install -r ../requirements.txt
-
-# Set up the database
-python manage.py migrate
-
-# Create an admin user for the Django admin panel
-python manage.py createsuperuser
-
-3. Frontend Setup
-# Navigate to the frontend directory
-cd ../../frontend
-
-# Install JavaScript dependencies
-npm install
-
-4. Running the Full System
-To run the application, you need to have four separate terminals open and running simultaneously.
-
-Terminal 1 (Redis):
-
-redis-server
-
-Terminal 2 (Celery Worker):
-
-# Navigate to backend/qercas_project and activate venv
-celery -A qercas_project worker -l info
-
-Terminal 3 (Django Backend):
-
-# Navigate to backend/qercas_project and activate venv
-python manage.py runserver
-
-Terminal 4 (React Frontend):
-
-# Navigate to frontend
-npm run dev
-
-Once all services are running, open your browser and navigate to the URL provided by the Vite server (usually http://localhost:5173).
-
-Usage
-Generate Live Data: To see the dashboard populate with data, run the stream simulator in a fifth terminal.
-
-# Navigate to backend/qercas_project and activate venv
-python stream_simulator.py
